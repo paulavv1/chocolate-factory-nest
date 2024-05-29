@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is a NestJS API for managing the Willy Wonka Factory operations. It uses Prisma as the ORM, Joi for configuration validation, and follows modern best practices for a robust and maintainable application.
+This project is a NestJS API for managing the Chocolate Factory operations. It uses Prisma as the ORM, Joi for configuration validation, and follows modern best practices for a robust and maintainable application.
 
 ## Features
 
@@ -19,56 +19,68 @@ This project is a NestJS API for managing the Willy Wonka Factory operations. It
 - npm (>= 6.x) or yarn
 - PostgreSQL database
 
-## Installation
+## Instalación
 
-1. **Clone the repository:**
+1. **Clonar el repositorio:**
 
-2. **Install dependencies:**
+2. **Instalar dependencias:**
 
-   Using npm:
+   Usando npm:
 
    ```sh
    npm install
    ```
 
-3. **Set up environment variables:**
+## Base de Datos (Local)
+1. **Crear una base de datos:**
 
-   Create a `.env` file in the root of the project and add the following variables:
+2. **Configurar variables de entorno:**
+
+   Crea un archivo `.env` en la raíz del proyecto y agrega las siguiente variable:
 
    ```env
-   PORT=3000
-   DATABASE_URL=postgresql://user:password@localhost:5432/willywonka
-   JWT_SECRET=your-jwt-secret
-   JWT_EXPIRES_IN=60s
+   DATABASE_URL=postgresql://user:password@localhost:5432/database
+   
+   user: postgresql
+   password: La que colocaste al momento de la instalación
+   localhost: Porque la base de datos la tienes en tu ordenador
+   puerto: Dentro de PgAdmin -> click derecho en PostgresSQL 16 -> Propiedades -> Puerto
+   database: Nombre de la base de datos que creaste
    ```
 
-4. **Set up Prisma:**
+3. **Crear Tablas en la Base de Datos:**
 
-   Generate the Prisma client and apply migrations:
+   Aplica las migraciones:
 
    ```sh
-   npx prisma generate
    npx prisma migrate dev --name init
    ```
 
-## Running the Application
+4. **Llena con datos las Tablas :**
 
-1. **Start the development server:**
+   Los datos se hayan en el archivo `prisma/seed.ts`. Ejecuta el siguiente comando para llenar las tablas con datos de prueba:
 
-   Using npm:
+   ```sh
+   npm run seed
+   ```
+
+## Ejecutar la Aplicación
+
+1. **Iniciar el servidor de desarrollo:**
+
+   Usando npm:
 
    ```sh
    npm run start:dev
    ```
 
-2. **Access the API:**
+2. **Acceder a la API:**
 
-   The API will be running at `http://localhost:3000`.
+   La API estará corriendo en `http://localhost:3000`.
 
-3. **Access Swagger documentation:**
+3. **Acceder a la documentación de Swagger:**
 
-   Visit `http://localhost:3000/api` to view the Swagger API documentation.
-
+   Visita `http://localhost:3000/api` para ver la documentación de la API de Swagger.
 ## Project Structure
 
 ```sh
