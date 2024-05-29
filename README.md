@@ -39,11 +39,14 @@ This project is a NestJS API for managing the Chocolate Factory operations. It u
 
 2. **Configurar variables de entorno:**
 
-   Crea un archivo `.env` en la raíz del proyecto y agrega las siguiente variable:
+   Crea un archivo `.env` en la raíz del proyecto y agrega la siguiente variable:
 
    ```env
    DATABASE_URL=postgresql://user:password@localhost:5432/database
-   
+    ```
+
+   Explicación
+```env
    user: postgres
    password: La que colocaste al momento de la instalación
    localhost: Porque la base de datos la tienes en tu ordenador
