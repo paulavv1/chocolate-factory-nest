@@ -33,6 +33,9 @@ This project is a NestJS API for managing the Chocolate Factory operations. It u
 
 ## Base de Datos (Local)
 1. **Crear una base de datos:**
+   
+![image](https://github.com/ghostbounty/chocolate-factory-nest/assets/82419364/6aee0d03-e797-4280-bb57-f36acc4baca4)
+
 
 2. **Configurar variables de entorno:**
 
@@ -41,12 +44,15 @@ This project is a NestJS API for managing the Chocolate Factory operations. It u
    ```env
    DATABASE_URL=postgresql://user:password@localhost:5432/database
    
-   user: postgresql
+   user: postgres
    password: La que colocaste al momento de la instalación
    localhost: Porque la base de datos la tienes en tu ordenador
-   puerto: Dentro de PgAdmin -> click derecho en PostgresSQL 16 -> Propiedades -> Puerto
+   puerto: Dentro de PgAdmin -> click derecho en PostgresSQL 16 -> Propiedades -> Connection -> Puerto
    database: Nombre de la base de datos que creaste
    ```
+
+![image](https://github.com/ghostbounty/chocolate-factory-nest/assets/82419364/2ee7e2c3-e35e-4e8e-8526-70c6f5a96446)
+
 
 3. **Crear Tablas en la Base de Datos:**
 
